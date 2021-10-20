@@ -32,7 +32,7 @@ class Character extends FlxSprite
 		{
 			case 'gf':
 				// GIRLFRIEND CODE
-				noteSkin = 'pissy';
+				noteSkin = 'normal';
 				tex = Paths.getSparrowAtlas('characters/GF_assets');
 				frames = tex;
 				animation.addByPrefix('cheer', 'GF Cheer', 24, false);
@@ -130,7 +130,7 @@ class Character extends FlxSprite
 				
 
 			case 'gf-christmas':
-				noteSkin = 'pissy';
+				noteSkin = 'normal';
 				tex = Paths.getSparrowAtlas('characters/gfChristmas');
 				frames = tex;
 				animation.addByPrefix('cheer', 'GF Cheer', 24, false);
@@ -208,7 +208,7 @@ class Character extends FlxSprite
 				playAnim('danceRight');
 
 			case 'gf-pixel':
-				noteSkin = 'pissy';
+				noteSkin = 'normal';
 				tex = Paths.getSparrowAtlas('characters/gfPixel');
 				frames = tex;
 				animation.addByIndices('singUP', 'GF IDLE', [2], "", 24, false);
@@ -226,7 +226,7 @@ class Character extends FlxSprite
 
 			case 'dad':
 				// DAD ANIMATION LOADING CODE
-				noteSkin = 'pissy';
+				noteSkin = 'fuckofftwat';
 				tex = Paths.getSparrowAtlas('characters/DADDY_DEAREST', 'shared');
 				frames = tex;
 				animation.addByPrefix('idle', 'Dad idle dance', 24);
@@ -242,6 +242,25 @@ class Character extends FlxSprite
 				addOffset("singDOWN", 0, -30);
 
 				playAnim('idle');
+			
+			case 'dad-pissy':
+				// DAD ANIMATION LOADING CODE
+				noteSkin = 'pissy';
+				tex = Paths.getSparrowAtlas('characters/DADDY_DEAREST-pissy', 'shared');
+				frames = tex;
+				animation.addByPrefix('idle', 'Dad idle dance', 24);
+				animation.addByPrefix('singUP', 'Dad Sing Note UP', 24);
+				animation.addByPrefix('singRIGHT', 'Dad Sing Note RIGHT', 24);
+				animation.addByPrefix('singDOWN', 'Dad Sing Note DOWN', 24);
+				animation.addByPrefix('singLEFT', 'Dad Sing Note LEFT', 24);
+
+				addOffset('idle');
+				addOffset("singUP", -6, 50);
+				addOffset("singRIGHT", 0, 27);
+				addOffset("singLEFT", -10, 10);
+				addOffset("singDOWN", 0, -30);
+
+				playAnim('idle');			
 				
 			case 'it':
 				noteSkin = 'it';
@@ -262,7 +281,7 @@ class Character extends FlxSprite
 				playAnim('idle');
 				
 			case 'spooky':
-				noteSkin = 'pissy';
+				noteSkin = 'fuckofftwat';
 				tex = Paths.getSparrowAtlas('characters/spooky_kids_assets');
 				frames = tex;
 				animation.addByPrefix('singUP', 'spooky UP NOTE', 24, false);
@@ -283,7 +302,7 @@ class Character extends FlxSprite
 				playAnim('danceRight');
 			
 			case 'mom':
-				noteSkin = 'pissy';
+				noteSkin = 'fuckofftwat';
 				tex = Paths.getSparrowAtlas('characters/Mom_Assets');
 				frames = tex;
 
@@ -304,7 +323,7 @@ class Character extends FlxSprite
 				playAnim('idle');
 
 			case 'mom-car':
-				noteSkin = 'pissy';
+				noteSkin = 'fuckofftwat';
 				tex = Paths.getSparrowAtlas('characters/momCar');
 				frames = tex;
 
@@ -324,7 +343,7 @@ class Character extends FlxSprite
 
 				playAnim('idle');
 			case 'monster':
-				noteSkin = 'pissy';
+				noteSkin = 'fuckofftwat';
 				tex = Paths.getSparrowAtlas('characters/Monster_Assets');
 				frames = tex;
 				animation.addByPrefix('idle', 'monster idle', 24, false);
@@ -375,7 +394,7 @@ class Character extends FlxSprite
 				playAnim('idle');
 				
 			case 'pico':
-				noteSkin = 'pissy';
+				noteSkin = 'fuckofftwat';
 				tex = Paths.getSparrowAtlas('characters/Pico_FNF_assetss');
 				frames = tex;
 				animation.addByPrefix('idle', "Pico Idle Dance", 24);
@@ -416,6 +435,7 @@ class Character extends FlxSprite
 
 
 			case 'bf':
+				noteSkin = 'fuckofftwat';				
 				var tex = Paths.getSparrowAtlas('characters/BOYFRIEND', 'shared');
 				frames = tex;
 
@@ -501,7 +521,7 @@ class Character extends FlxSprite
 				flipX = true;
 				
 			case 'bf-christmas':
-				noteSkin = 'pissy';
+				noteSkin = 'fuckofftwat';
 				var tex = Paths.getSparrowAtlas('characters/bfChristmas');
 				frames = tex;
 				animation.addByPrefix('idle', 'BF idle dance', 24, false);
@@ -531,7 +551,7 @@ class Character extends FlxSprite
 				flipX = true;
 			
 			case 'bf-car':
-				noteSkin = 'pissy';
+				noteSkin = 'almostfree';
 				var tex = Paths.getSparrowAtlas('characters/bfCar');
 				frames = tex;
 				animation.addByPrefix('idle', 'BF idle dance', 24, false);
@@ -715,7 +735,7 @@ class Character extends FlxSprite
 				antialiasing = false;
 
 			case 'parents-christmas':
-				noteSkin = 'pissy';
+				noteSkin = 'fuckofftwat';
 				frames = Paths.getSparrowAtlas('characters/mom_dad_christmas_assets');
 				animation.addByPrefix('idle', 'Parent Christmas Idle', 24, false);
 				animation.addByPrefix('singUP', 'Parent Up Note Dad', 24, false);

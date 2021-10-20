@@ -44,7 +44,8 @@ class HealthIcon extends FlxSprite
 		animation.add('mutant', [28, 29], 0, false, isPlayer);	
 		animation.add('me-corrupted', [30, 31], 0, false, isPlayer);
 		animation.add('pissy-bf', [32, 33], 0, false, isPlayer);
-		animation.add('pissy-gf', [34], 0, false, isPlayer);	
+		animation.add('pissy-gf', [34], 0, false, isPlayer);
+		animation.add('dad-pissy', [28, 29], 0, false, isPlayer);		
 		animation.play(char);
 
 		switch(char)
