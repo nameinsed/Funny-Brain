@@ -63,10 +63,25 @@ class Character extends FlxSprite
 
 				playAnim('danceRight');
 				
-			case 'imfuckingdone':
-				// GIRLFRIEND CODE
+			case 'ill-fuck-you-up':
+				noteSkin = 'fuckofftwat';				
+				tex = Paths.getSparrowAtlas('characters/ill-fuck-you-up');
+				frames = tex;
+				animation.addByPrefix('cheer', 'GF Cheer', 24, false);
+				animation.addByIndices('sad', 'gf sad', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "", 24, false);
+				animation.addByIndices('danceLeft', 'GF Dancing Beat', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
+				animation.addByIndices('danceRight', 'GF Dancing Beat', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
+				animation.addByPrefix('scared', 'GF FEAR', 24);
+				addOffset('cheer');
+				addOffset('sad', -2, -2);
+				addOffset('danceLeft', 0, -9);
+				addOffset('danceRight', 0, -9);
+				addOffset('scared', -2, -17);
+				playAnim('danceRight');
+				
+			case 'clone':
 				noteSkin = 'pissy';
-				tex = Paths.getSparrowAtlas('characters/imfuckingdone');
+				tex = Paths.getSparrowAtlas('characters/clone');
 				frames = tex;
 				animation.addByPrefix('cheer', 'GF Cheer', 24, false);
 				animation.addByPrefix('singLEFT', 'GF left note', 24, false);
@@ -130,7 +145,7 @@ class Character extends FlxSprite
 				
 
 			case 'gf-christmas':
-				noteSkin = 'normal';
+				noteSkin = 'fuckofftwat';
 				tex = Paths.getSparrowAtlas('characters/gfChristmas');
 				frames = tex;
 				animation.addByPrefix('cheer', 'GF Cheer', 24, false);
@@ -162,7 +177,7 @@ class Character extends FlxSprite
 				playAnim('danceRight');
 				
 			case 'gfchristmas-corrupted':
-				noteSkin = 'pissy';
+				noteSkin = 'fuckofftwat';
 				tex = Paths.getSparrowAtlas('characters/gfChristmas-corrupted');
 				frames = tex;
 				animation.addByPrefix('cheer', 'GF Cheer', 24, false);
@@ -194,7 +209,7 @@ class Character extends FlxSprite
 				playAnim('danceRight');
 
 			case 'gf-car':
-				noteSkin = 'pissy';
+				noteSkin = 'fuckofftwat';
 				tex = Paths.getSparrowAtlas('characters/gfCar');
 				frames = tex;
 				animation.addByIndices('singUP', 'GF Dancing Beat Hair blowing CAR', [0], "", 24, false);
@@ -840,6 +855,17 @@ class Character extends FlxSprite
 							playAnim('danceLeft');
 					}
 					
+				case 'ill-fuck-you-up':
+					if (!animation.curAnim.name.startsWith('hair'))
+					{
+						danced = !danced;
+
+						if (danced)
+							playAnim('danceRight');
+						else
+							playAnim('danceLeft');
+					}
+					
 				case 'pissy-gf':
 					if (!animation.curAnim.name.startsWith('hair'))
 					{
@@ -851,7 +877,7 @@ class Character extends FlxSprite
 							playAnim('danceLeft');
 					}
 
-				case 'imfuckingdone':
+				case 'clone':
 					if (!animation.curAnim.name.startsWith('hair'))
 					{
 						danced = !danced;
@@ -958,7 +984,7 @@ class Character extends FlxSprite
 				danced = false;
 			}
 		}
-			if (curCharacter == 'imfuckingdone')
+			if (curCharacter == 'clone')
 		{
 			if (AnimName == 'singLEFT')
 			{

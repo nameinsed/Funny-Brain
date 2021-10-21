@@ -839,8 +839,10 @@ class PlayState extends MusicBeatState
 				gfVersion = 'gf';
 			case 'pissy-gf':
 				gfVersion = 'pissy-gf';
-			case 'imfuckingdone':
-				gfVersion = 'imfuckingdone';
+			case 'clone':
+				gfVersion = 'clone';
+			case 'ill-fuck-you-up':
+				gfVersion = 'ill-fuck-you-up';
 		}
 
 		gf = new Character(400, 130, gfVersion);
