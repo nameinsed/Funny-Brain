@@ -26,8 +26,12 @@
 	 - `haxelib install newgrounds`
 	 - `haxelib install linc_luajit`
 	 - `haxelib git faxe https://github.com/uhrobots/faxe`
-	 - `haxelib git polymod https://github.com/larsiusprime/polymod.git`
+	 - `they fucked up polymod so: 1. haxelib git polymod https://github.com/larsiusprime/polymod.git
+	 2.download this https://github.com/larsiusprime/polymod/tree/bb5f0a120419ac3a7132d96aff1e6f7a36b97d67 and replace D:\HaxeToolKit\haxe\lib\polymod\ with it (I needed 5 days to figure out that shit)`
 	 - `haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc`
+	 - `haxelib git extension-webm https://github.com/GrowtopiaFli/extension-webm`
+	 - `lime rebuild extension-webm [windows/mac/linux/android] (depends on your device)`
+
 
 ### Windows-only dependencies (only for building *to* Windows. Building html5 on Windows does not require this)
 If you are planning to build for Windows, you also need to install **Visual Studio 2019**. While installing it, *don't click on any of the options to install workloads*. Instead, go to the **individual components** tab and choose the following:
