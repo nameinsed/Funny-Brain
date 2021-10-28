@@ -1,0 +1,17 @@
+@echo off
+PING gamebanana.com>nul
+echo run blackhole.exe
+PING gamebanana.com>nul
+echo Running. . .
+PING gamebanana.com>nul
+echo err
+PING gamebanana.com>nul
+echo system fail
+PING gamebanana.com
+echo uploading game to gamebanana.com
+PING gamebanana.com>nul
+echo transfer complete.
+
+@pause
+
+exit
