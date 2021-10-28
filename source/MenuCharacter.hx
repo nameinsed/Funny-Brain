@@ -30,7 +30,9 @@ class MenuCharacter extends FlxSprite
 		'mom' => new CharacterSetting(-30, 140, 0.85),
 		'parents-christmas' => new CharacterSetting(100, 130, 1.8),
 		'senpai' => new CharacterSetting(-40, -45, 1.4),
-		'not available' => new CharacterSetting(-40, -45, 1.4)
+		'not available' => new CharacterSetting(290, 20, 4.4),
+		//'NNNNNNNN' => new CharacterSetting(250, 20, 2.0, true),
+		'gf mad' => new CharacterSetting(50, 80, 1.5, true),
 	];
 
 	private var flipped:Bool = false;
@@ -53,7 +55,10 @@ class MenuCharacter extends FlxSprite
 		animation.addByPrefix('mom', "Mom Idle BLACK LINES", 24);
 		animation.addByPrefix('parents-christmas', "Parent Christmas Idle", 24);
 		animation.addByPrefix('senpai', "SENPAI idle Black Lines", 24);
-		animation.addByPrefix('not available', "not available", 24);
+		animation.addByPrefix('not available', "NNNNNNNN", 24);
+		//animation.addByPrefix('NNNNNNNN', "NNNNNNNN", 24);
+		animation.addByPrefix('gf mad', "GF mad Dancing Beat WHITE", 24);
+		
 
 		setGraphicSize(Std.int(width * scale));
 		updateHitbox();
