@@ -829,6 +829,8 @@ class PlayState extends MusicBeatState
 		{
 			case 'gf-car':
 				gfVersion = 'gf-car';
+			case 'HAHAHA':
+				gfVersion = 'HAHAHA';
 			case 'gf-christmas':
 				gfVersion = 'gf-christmas';
 			case 'gfchristmas-corrupted':
