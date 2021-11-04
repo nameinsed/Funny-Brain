@@ -350,7 +350,7 @@ class Character extends FlxSprite
 				playAnim('danceRight');
 			
 			case 'mom':
-				noteSkin = 'almostfree';
+				noteSkin = 'gameover';
 				tex = Paths.getSparrowAtlas('characters/Mom_Assets');
 				frames = tex;
 
@@ -371,7 +371,7 @@ class Character extends FlxSprite
 				playAnim('idle');
 
 			case 'mom-car':
-				noteSkin = 'almostfree';
+				noteSkin = 'gameover';
 				tex = Paths.getSparrowAtlas('characters/momCar');
 				frames = tex;
 
