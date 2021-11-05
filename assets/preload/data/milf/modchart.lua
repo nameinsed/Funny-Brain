@@ -1,23 +1,34 @@
--- this gets called starts when the level loads.
-function start(song) -- arguments, the song name
+
+function start(song) --displace mom arrows
         setActorX(-300, 0)
         setActorX(-300, 1)
         setActorX(-300, 2)
 		setActorX(-300, 3)       
 end
 
--- this gets called every frame
-function update(elapsed) -- arguments, how long it took to complete a frame
+
+function update(elapsed)
+if curStep == 1450 then
+	changeBoyfriendCharacter('FREEDOM!')
+	tweenFadeOut(4, 0, 5, done)
+	tweenFadeOut(5, 0, 5, done)
+	tweenFadeOut(6, 0, 5, done)
+	tweenFadeOut(7, 0, 5, done)
+	setActorX(0, 0)
+    setActorX(150, 1)
+    setActorX(200, 2)
+	setActorX(350, 3)   
+end --spooky arrows
 
 end
 
--- this gets called every beat
-function beatHit(beat) -- arguments, the current beat of the song
+
+function beatHit(beat)
 
 end
 
--- this gets called every step
-function stepHit(step) -- arguments, the current step of the song (4 steps are in a beat)
+
+function stepHit(step)
     
 
 

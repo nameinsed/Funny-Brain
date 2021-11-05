@@ -18,6 +18,8 @@ class HealthIcon extends FlxSprite
 		antialiasing = true;
 		animation.add('bf', [0, 1], 0, false, isPlayer);
 		animation.add('bf-car', [10, 11], 0, false, isPlayer);
+		animation.add('bf-car-uhoh', [10, 11], 0, false, isPlayer);		
+		animation.add('bf-car-fucked', [10, 11], 0, false, isPlayer);		
 		animation.add('bf-christmas', [0, 1], 0, false, isPlayer);
 		animation.add('bf-pixel', [21, 21], 0, false, isPlayer);
 		animation.add('spooky', [2, 3], 0, false, isPlayer);
@@ -47,7 +49,10 @@ class HealthIcon extends FlxSprite
 		animation.add('me-corrupted', [30, 31], 0, false, isPlayer);
 		animation.add('pissy-bf', [32, 33], 0, false, isPlayer);
 		animation.add('pissy-gf', [34], 0, false, isPlayer);
-		animation.add('dad-pissy', [28, 29], 0, false, isPlayer);		
+		animation.add('dad-pissy', [28, 29], 0, false, isPlayer);
+		animation.add('mom-car-fucked', [10, 11], 0, false, isPlayer);
+		animation.add('mom-car-uhoh', [10, 11], 0, false, isPlayer);
+		animation.add('FREEDOM!', [36, 37], 0, false, isPlayer);
 		animation.play(char);
 
 		switch(char)
