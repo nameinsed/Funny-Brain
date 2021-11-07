@@ -53,6 +53,7 @@ class HealthIcon extends FlxSprite
 		animation.add('mom-car-fucked', [10, 11], 0, false, isPlayer);
 		animation.add('mom-car-uhoh', [10, 11], 0, false, isPlayer);
 		animation.add('FREEDOM!', [36, 37], 0, false, isPlayer);
+		animation.add('one-down-LLL', [10, 11], 0, false, isPlayer);
 		animation.play(char);
 
 		switch(char)

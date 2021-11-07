@@ -144,6 +144,38 @@ class Character extends FlxSprite
 
 				playAnim('danceRight');
 				
+			case 'gfspeakingthroughclone':
+				noteSkin = 'pissy';
+				tex = Paths.getSparrowAtlas('characters/gfspeakingthroughclone');
+				frames = tex;
+				animation.addByPrefix('cheer', 'GF Cheer', 24, false);
+				animation.addByPrefix('singLEFT', 'GF left note', 24, false);
+				animation.addByPrefix('singRIGHT', 'GF Right Note', 24, false);
+				animation.addByPrefix('singUP', 'GF Up Note', 24, false);
+				animation.addByPrefix('singDOWN', 'GF Down Note', 24, false);
+				animation.addByIndices('sad', 'gf sad', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "", 24, false);
+				animation.addByIndices('danceLeft', 'GF Dancing Beat', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
+				animation.addByIndices('danceRight', 'GF Dancing Beat', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
+				animation.addByIndices('hairBlow', "GF Dancing Beat Hair blowing", [0, 1, 2, 3], "", 24);
+				animation.addByIndices('hairFall', "GF Dancing Beat Hair Landing", [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], "", 24, false);
+				animation.addByPrefix('scared', 'GF FEAR', 24);
+
+				addOffset('cheer');
+				addOffset('sad', -2, -2);
+				addOffset('danceLeft', 0, -9);
+				addOffset('danceRight', 0, -9);
+
+				addOffset("singUP", 0, 4);
+				addOffset("singRIGHT", 0, -20);
+				addOffset("singLEFT", 0, -19);
+				addOffset("singDOWN", 0, -20);
+				addOffset('hairBlow', 45, -8);
+				addOffset('hairFall', 0, -9);
+
+				addOffset('scared', -2, -17);
+
+				playAnim('danceRight');
+				
 		case 'pissy-gf':
 				noteSkin = 'pissy';
 				tex = Paths.getSparrowAtlas('characters/pissy-gf');
@@ -256,7 +288,7 @@ class Character extends FlxSprite
 				playAnim('danceRight');
 				
 			case 'gf-car-uhoh':
-				noteSkin = 'finalpush';
+				noteSkin = 'DEATH';
 				tex = Paths.getSparrowAtlas('characters/gfCar-uhoh');
 				frames = tex;
 				animation.addByIndices('singUP', 'GF Dancing Beat Hair blowing CAR', [0], "", 24, false);
@@ -364,7 +396,7 @@ class Character extends FlxSprite
 				playAnim('danceRight');
 			
 			case 'mom':
-				noteSkin = 'finalpush';
+				noteSkin = 'DEATH';
 				tex = Paths.getSparrowAtlas('characters/Mom_Assets');
 				frames = tex;
 
@@ -385,7 +417,7 @@ class Character extends FlxSprite
 				playAnim('idle');
 
 			case 'mom-car':
-				noteSkin = 'finalpush';
+				noteSkin = 'DEATH';
 				tex = Paths.getSparrowAtlas('characters/momCar');
 				frames = tex;
 
@@ -406,7 +438,7 @@ class Character extends FlxSprite
 				playAnim('idle');
 				
 			case 'mom-car-uhoh':
-				noteSkin = 'finalpush';
+				noteSkin = 'DEATH';
 				tex = Paths.getSparrowAtlas('characters/momCar-uhoh');
 				frames = tex;
 
@@ -425,7 +457,7 @@ class Character extends FlxSprite
 				playAnim('idle');
 
 			case 'mom-car-fucked':
-				noteSkin = 'finalpush';
+				noteSkin = 'DEATH';
 				tex = Paths.getSparrowAtlas('characters/momCar-fucked');
 				frames = tex;
 
@@ -530,6 +562,46 @@ class Character extends FlxSprite
 				addOffset("singLEFTmiss", 62, 64);
 				addOffset("singDOWNmiss", 210, -28);
 
+				playAnim('idle');
+
+				flipX = true;
+				
+			case 'one-down-LLL':
+				noteSkin = 'DEATH';
+				tex = Paths.getSparrowAtlas('characters/one-down-LLL');
+				frames = tex;
+				animation.addByPrefix('idle', "Pico Idle Dance", 24);
+				animation.addByPrefix('singUP', 'pico Up note0', 24, false);
+				animation.addByPrefix('singDOWN', 'Pico Down Note0', 24, false);
+				if (isPlayer)
+				{
+					animation.addByPrefix('singLEFT', 'Pico NOTE LEFT0', 24, false);
+					animation.addByPrefix('singRIGHT', 'Pico Note Right0', 24, false);
+					animation.addByPrefix('singRIGHTmiss', 'Pico Note Right Miss', 24, false);
+					animation.addByPrefix('singLEFTmiss', 'Pico NOTE LEFT miss', 24, false);
+				}
+				else
+				{
+					// Need to be flipped! REDO THIS LATER!
+					animation.addByPrefix('singLEFT', 'Pico Note Right0', 24, false);
+					animation.addByPrefix('singRIGHT', 'Pico NOTE LEFT0', 24, false);
+					animation.addByPrefix('singRIGHTmiss', 'Pico NOTE LEFT miss', 24, false);
+					animation.addByPrefix('singLEFTmiss', 'Pico Note Right Miss', 24, false);
+				}
+
+				animation.addByPrefix('singUPmiss', 'pico Up note miss', 24);
+				animation.addByPrefix('singDOWNmiss', 'Pico Down Note MISS', 24);
+
+				addOffset('idle');
+				addOffset("singUP", -29, 27);
+				addOffset("singRIGHT", -68, -7);
+				addOffset("singLEFT", 65, 9);
+				addOffset("singDOWN", 200, -70);
+				addOffset("singUPmiss", -19, 67);
+				addOffset("singRIGHTmiss", -60, 41);
+				addOffset("singLEFTmiss", 62, 64);
+				addOffset("singDOWNmiss", 210, -28);
+				
 				playAnim('idle');
 
 				flipX = true;
@@ -706,7 +778,7 @@ class Character extends FlxSprite
 				flipX = true;
 				
 			case 'bf-car-uhoh':
-				noteSkin = 'finalpush';
+				noteSkin = 'DEATH';
 				var tex = Paths.getSparrowAtlas('characters/bfCar-uhoh');
 				frames = tex;
 				animation.addByPrefix('idle', 'BF idle dance', 24, false);
@@ -733,7 +805,7 @@ class Character extends FlxSprite
 				flipX = true;
 		
 			case 'bf-car-fucked':
-				noteSkin = 'finalpush';
+				noteSkin = 'DEATH';
 				var tex = Paths.getSparrowAtlas('characters/bfCar-fucked');
 				frames = tex;
 				animation.addByPrefix('idle', 'BF idle dance', 24, false);
@@ -1043,6 +1115,17 @@ class Character extends FlxSprite
 							playAnim('danceLeft');
 					}
 					
+				case 'gfspeakingthroughclone':
+					if (!animation.curAnim.name.startsWith('hair'))
+					{
+						danced = !danced;
+
+						if (danced)
+							playAnim('danceRight');
+						else
+							playAnim('danceLeft');
+					}
+					
 				case 'pissy-gf':
 					if (!animation.curAnim.name.startsWith('hair'))
 					{
@@ -1200,6 +1283,7 @@ class Character extends FlxSprite
 				danced = !danced;
 			}
 		}
+		
 	}
 
 	public function addOffset(name:String, x:Float = 0, y:Float = 0)
