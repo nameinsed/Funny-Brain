@@ -14,10 +14,10 @@ if curStep == 1450 then
 	tweenFadeOut(5, 0, 5, done)
 	tweenFadeOut(6, 0, 5, done)
 	tweenFadeOut(7, 0, 5, done)
-	setActorX(0, 0)
-    setActorX(150, 1)
-    setActorX(200, 2)
-	setActorX(350, 3)   
+	setActorX(50, 0)
+    setActorX(200, 1)
+    setActorX(350, 2)
+	setActorX(500, 3)   
 end --spooky arrows
 
 end

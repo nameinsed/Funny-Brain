@@ -341,6 +341,8 @@ class PlayState extends MusicBeatState
 				dialogue = CoolUtil.coolTextFile(Paths.txt('senpai/senpaiDialogue'));
 			case 'roses':
 				dialogue = CoolUtil.coolTextFile(Paths.txt('roses/rosesDialogue'));
+			case 'rooses':
+				dialogue = CoolUtil.coolTextFile(Paths.txt('rooses/rosesDialogue'));
 			case 'thorns':
 				dialogue = CoolUtil.coolTextFile(Paths.txt('thorns/thornsDialogue'));
 			case 'will':
@@ -651,7 +653,7 @@ class PlayState extends MusicBeatState
 					bgGirls = new BackgroundGirls(-100, 190);
 					bgGirls.scrollFactor.set(0.9, 0.9);
 
-					if (songLowercase == 'roses')
+					if (songLowercase == 'roses' || songLowercase == 'rooses')
 						{
 							if(FlxG.save.data.distractions){
 								bgGirls.getScared();
@@ -841,6 +843,33 @@ class PlayState extends MusicBeatState
 
 					add(stageCurtains);
 			}					
+			case 'nothing':
+			{
+					defaultCamZoom = 0.9;
+					curStage = 'stage';
+					var bg:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('empty data/1'));
+					bg.antialiasing = true;
+					bg.scrollFactor.set(0.9, 0.9);
+					bg.active = false;
+					add(bg);
+
+					var stageFront:FlxSprite = new FlxSprite(-650, 600).loadGraphic(Paths.image('empty data/2'));
+					stageFront.setGraphicSize(Std.int(stageFront.width * 1.1));
+					stageFront.updateHitbox();
+					stageFront.antialiasing = true;
+					stageFront.scrollFactor.set(0.9, 0.9);
+					stageFront.active = false;
+					add(stageFront);
+
+					var stageCurtains:FlxSprite = new FlxSprite(-500, -300).loadGraphic(Paths.image('empty data/3'));
+					stageCurtains.setGraphicSize(Std.int(stageCurtains.width * 0.9));
+					stageCurtains.updateHitbox();
+					stageCurtains.antialiasing = true;
+					stageCurtains.scrollFactor.set(1.3, 1.3);
+					stageCurtains.active = false;
+
+					add(stageCurtains);
+			}			
 			
 			default:
 			{
@@ -869,6 +898,7 @@ class PlayState extends MusicBeatState
 
 					add(stageCurtains);
 			}
+
 		}
 		var gfVersion:String = 'gf';
 
@@ -898,6 +928,8 @@ class PlayState extends MusicBeatState
 				gfVersion = 'gfspeakingthroughclone';
 			case 'ill-fuck-you-up':
 				gfVersion = 'ill-fuck-you-up';
+			case 'im-here':
+				gfVersion = 'im-here';
 		}
 
 		gf = new Character(400, 130, gfVersion);
@@ -925,6 +957,10 @@ class PlayState extends MusicBeatState
 			case 'monster-christmas':
 				dad.y += 130;
 			case 'dad':
+				camPos.x += 400;
+			case 'she':
+				camPos.x += 400;
+			case 'UNSTABLE':
 				camPos.x += 400;
 			case 'pico':
 				camPos.x += 600;
@@ -1210,6 +1246,8 @@ class PlayState extends MusicBeatState
 				case 'roses':
 					FlxG.sound.play(Paths.sound('ANGRY'));
 					schoolIntro(doof);
+				case 'rooses':
+					schoolIntro(doof);				
 				case 'thorns':
 					schoolIntro(doof);
 				case 'will':
@@ -2665,7 +2703,7 @@ class PlayState extends MusicBeatState
 
 	function endSong():Void
 	{
-				if (SONG.song.toLowerCase() == 'roses')
+				if ((SONG.song.toLowerCase() == 'roses') && (storyWeek == 6))
 				{
 				LoadingState.loadAndSwitchState(new StoryMenuState());
 				}
@@ -2736,10 +2774,14 @@ class PlayState extends MusicBeatState
 				{
 				FlxG.switchState(new VideoState('assets/videos/end/end.webm', new StoryMenuState()));			
 				}
+				else if (SONG.song.toLowerCase() == 'end')
+				{
+				FlxG.switchState(new VideoState('assets/videos/liar/end.webm', new StoryMenuState()));				
+				}		
 				else
 				{
 				FlxG.switchState(new StoryMenuState());
-				}				
+				}
 				
 					#if windows
 					if (luaModchart != null)

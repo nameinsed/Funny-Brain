@@ -25,14 +25,14 @@ class StoryMenuState extends MusicBeatState
 	var scoreText:FlxText;
 
 	var weekData:Array<Dynamic> = [
-		['Tutorial'],
+		['Tutorial', 'Bopeebo', 'Fresh', 'Dad Battle', 'Spookeez', 'South', 'Pico', 'Philly Nice', "Blammed", 'Satin Panties', "High", "Milf", 'Cocoa', 'Eggnog', 'Winter Horrorland', 'Senpai', 'rooses', 'he', 'will', 'suffer', 'End'],
 		['Bopeebo', 'Fresh', 'Dad Battle'],
 		['Spookeez', 'South'],
 		['Pico', 'Philly Nice', "Blammed"],
 		['Satin Panties', "High", "Milf"],
 		['Cocoa', 'Eggnog', 'Winter Horrorland'],
 		['Senpai', 'Roses', 'Thorns'],
-		['he', 'will', 'suffer']
+		['he', 'will', 'suffer']	
 	];
 	var curDifficulty:Int = 1;
 
@@ -46,11 +46,11 @@ class StoryMenuState extends MusicBeatState
 		['mom', 'bf', 'gf'],
 		['parents-christmas', 'bf', 'gf'],
 		['senpai', 'bf', 'gf'],
-		['not available', 'bf', 'gf mad']
+		['not available', 'bf', 'gf mad']		
 	];
 
 	var weekNames:Array<String> = [
-		"",
+		"The movie",
 		"Daddy Dearest",
 		"Spooky Month",
 		"PICO",
@@ -62,7 +62,7 @@ class StoryMenuState extends MusicBeatState
 
 	var txtWeekTitle:FlxText;
 
-	var curWeek:Int = 0;
+	public var curWeek:Int = 0;
 
 	var txtTracklist:FlxText;
 
